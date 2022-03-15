@@ -227,7 +227,7 @@ if __name__ == "__main__":
     parser.add_argument("--dev_data", default='dev_dials_v2.json', type=str)
     parser.add_argument("--test_data", default='test_dials_v2.json', type=str)
     parser.add_argument("--pretrained_model", default='bert-base-uncased', type=str)
-    parser.add_argument("--save_dir", default='out-bert-base-train/exp', type=str)
+    parser.add_argument("--save_dir", default='output-aux/exp', type=str)
 
     parser.add_argument("--random_seed", default=42, type=int)
     parser.add_argument("--train_batch_size", default=8, type=int)
