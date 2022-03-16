@@ -36,4 +36,6 @@ After obtaining the pseudo labels, we train the primary model using both the ori
 
 ## Links
 
-The generated pseudp labels can be downloaded [here](https://drive.google.com/file/d/1xrzhbEIou7h-qS1yRd83vKVnR6ZGmotp/view?usp=sharing).
+* The generated pseudp labels can be downloaded [here](https://drive.google.com/file/d/1xrzhbEIou7h-qS1yRd83vKVnR6ZGmotp/view?usp=sharing).
+
+* The model checkpoints can be downloaded here: [2.0](https://drive.google.com/file/d/1QfwzHLWbWJh9pdJ5S1uonk8i6bUgZQdC/view?usp=sharing), [2.4](https://drive.google.com/file/d/1TLvozE_ezfiMHDiisTJVYUuJ93_h9SIp/view?usp=sharing).
