@@ -1,1 +1,1 @@
-The test and dev sets of the MultiWOZ 2.0 dataset have been replaced with their counterparts of the MultiWOZ 2.4 dataset. Therefore, the structure of this modifed dataset is **(train_2.0, dev_2.4, test_2.4)**.
+The test and dev sets of the MultiWOZ 2.0 dataset have been replaced with their counterparts of the MultiWOZ 2.4 dataset. Therefore, the structure of this modified dataset is **(train_2.0, dev_2.4, test_2.4)**.
