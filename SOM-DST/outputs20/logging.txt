@@ -1,0 +1,464 @@
+Namespace(alpha=0.0, attention_probs_dropout_prob=0.1, batch_size=32, bert_config_path='assets/bert_config_base_uncased.json', data_root='data/mwz2.0', dec_lr=0.0001, dec_warmup=0.1, decoder_teacher_forcing=0.5, dev_data='dev_dials_v2.json', dev_data_path='data/mwz2.0/dev_dials_v2.json', dropout=0.1, enc_lr=4e-05, enc_warmup=0.1, eval_epoch=1, hidden_dropout_prob=0.1, max_seq_length=256, msg=None, n_epochs=30, n_history=1, not_shuffle_state=False, num_workers=0, ontology_data='data/mwz2.0/ontology-modified.json', op_code='4', random_seed=42, save_dir='outputs20', shuffle_p=0.5, shuffle_state=True, slot_token='[SLOT]', test_data='test_dials_v2.json', test_data_path='data/mwz2.0/test_dials_v2.json', train_data='train_dials_v2.json', train_data_path='data/mwz2.0/train_dials_v2.json', vocab_path='assets/vocab.txt', word_dropout=0.1)
+['attraction-area', 'attraction-name', 'attraction-type', 'hotel-area', 'hotel-book day', 'hotel-book people', 'hotel-book stay', 'hotel-internet', 'hotel-name', 'hotel-parking', 'hotel-pricerange', 'hotel-stars', 'hotel-type', 'restaurant-area', 'restaurant-book day', 'restaurant-book people', 'restaurant-book time', 'restaurant-food', 'restaurant-name', 'restaurant-pricerange', 'taxi-arriveby', 'taxi-departure', 'taxi-destination', 'taxi-leaveat', 'train-arriveby', 'train-book people', 'train-day', 'train-departure', 'train-destination', 'train-leaveat']
+***** Running training *****
+ Num examples = 54982
+ Batch size = 32
+ Num steps = 51545
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.01
+
+Parameter Group 1
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.0
+)
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 0.0001
+    lr: 0.0
+    weight_decay: 0.0
+)
+Training...
+{'epoch': 1, 'joint_acc': 0.01492942453854506, 'op_acc': 0.8085233441910953, 'joint_turn_acc': 0.32301845819761127}
+{'epoch': 1, 'joint_acc': 0.013425549227013833, 'op_acc': 0.8064234698490176, 'joint_turn_acc': 0.3083807973962571}
+Epoch: 1 Test acc: 0.014929 Val acc: 0.013426 Best Score : 0.013426
+ epoch end 
+{'epoch': 2, 'joint_acc': 0.0247014115092291, 'op_acc': 0.822036735432491, 'joint_turn_acc': 0.3554560260586319}
+{'epoch': 2, 'joint_acc': 0.020748576078112285, 'op_acc': 0.8206084440828051, 'joint_turn_acc': 0.3390290208841877}
+Epoch: 2 Test acc: 0.024701 Val acc: 0.020749 Best Score : 0.020749
+ epoch end 
+{'epoch': 3, 'joint_acc': 0.126628664495114, 'op_acc': 0.9203854505971399, 'joint_turn_acc': 0.5553745928338762}
+{'epoch': 3, 'joint_acc': 0.13086520206129645, 'op_acc': 0.9195235512159465, 'joint_turn_acc': 0.5497694602657988}
+Epoch: 3 Test acc: 0.126629 Val acc: 0.130865 Best Score : 0.130865
+ epoch end 
+{'epoch': 4, 'joint_acc': 0.3502985884907709, 'op_acc': 0.9564920376401989, 'joint_turn_acc': 0.7170195439739414}
+{'epoch': 4, 'joint_acc': 0.34309736913479794, 'op_acc': 0.9556821263899729, 'joint_turn_acc': 0.7078925956061839}
+Epoch: 4 Test acc: 0.350299 Val acc: 0.343097 Best Score : 0.343097
+ epoch end 
+{'epoch': 5, 'joint_acc': 0.40540173724212814, 'op_acc': 0.961857582337997, 'joint_turn_acc': 0.7487785016286646}
+{'epoch': 5, 'joint_acc': 0.4010035259018172, 'op_acc': 0.9622412078473478, 'joint_turn_acc': 0.7417954976946026}
+Epoch: 5 Test acc: 0.405402 Val acc: 0.401004 Best Score : 0.401004
+ epoch end 
+{'epoch': 6, 'joint_acc': 0.38802931596091206, 'op_acc': 0.9622240318493871, 'joint_turn_acc': 0.7406351791530945}
+{'epoch': 6, 'joint_acc': 0.39530783835096284, 'op_acc': 0.9638097821172996, 'joint_turn_acc': 0.7375915378356387}
+Epoch: 6 Test acc: 0.388029 Val acc: 0.395308 Best Score : 0.401004
+ epoch end 
+{'epoch': 7, 'joint_acc': 0.3959011943539631, 'op_acc': 0.9614820846905082, 'joint_turn_acc': 0.7463355048859935}
+{'epoch': 7, 'joint_acc': 0.39625711960943855, 'op_acc': 0.9620965554651014, 'joint_turn_acc': 0.7396257119609438}
+Epoch: 7 Test acc: 0.395901 Val acc: 0.396257 Best Score : 0.401004
+ epoch end 
+{'epoch': 8, 'joint_acc': 0.3964440825190011, 'op_acc': 0.9629976474845678, 'joint_turn_acc': 0.7501357220412594}
+{'epoch': 8, 'joint_acc': 0.4042582045023054, 'op_acc': 0.9636334870264398, 'joint_turn_acc': 0.7446433414700299}
+Epoch: 8 Test acc: 0.396444 Val acc: 0.404258 Best Score : 0.404258
+ epoch end 
+{'epoch': 9, 'joint_acc': 0.40743756786102064, 'op_acc': 0.9643412956930391, 'joint_turn_acc': 0.7542073832790445}
+{'epoch': 9, 'joint_acc': 0.41971792785462436, 'op_acc': 0.964709339119384, 'joint_turn_acc': 0.7502034174125305}
+Epoch: 9 Test acc: 0.407438 Val acc: 0.419718 Best Score : 0.419718
+ epoch end 
+{'epoch': 10, 'joint_acc': 0.4173452768729642, 'op_acc': 0.9658523344190593, 'joint_turn_acc': 0.7664223669923995}
+{'epoch': 10, 'joint_acc': 0.4460265798752373, 'op_acc': 0.9671548684566954, 'joint_turn_acc': 0.7632221318144833}
+Epoch: 10 Test acc: 0.417345 Val acc: 0.446027 Best Score : 0.446027
+ epoch end 
+{'epoch': 11, 'joint_acc': 0.40418023887079263, 'op_acc': 0.9637169743032441, 'joint_turn_acc': 0.755700325732899}
+{'epoch': 11, 'joint_acc': 0.40710604827773256, 'op_acc': 0.9634933550311444, 'joint_turn_acc': 0.7423379441280173}
+Epoch: 11 Test acc: 0.404180 Val acc: 0.407106 Best Score : 0.446027
+ epoch end 
+{'epoch': 12, 'joint_acc': 0.38042888165038, 'op_acc': 0.9612830256966574, 'joint_turn_acc': 0.7319489685124865}
+{'epoch': 12, 'joint_acc': 0.39327366422565774, 'op_acc': 0.9613145285235957, 'joint_turn_acc': 0.7340656360184432}
+Epoch: 12 Test acc: 0.380429 Val acc: 0.393274 Best Score : 0.446027
+ epoch end 
+{'epoch': 13, 'joint_acc': 0.4188382193268187, 'op_acc': 0.9649068041982861, 'joint_turn_acc': 0.7604505971769815}
+{'epoch': 13, 'joint_acc': 0.434906427990236, 'op_acc': 0.9655546514781213, 'joint_turn_acc': 0.7577976674803363}
+Epoch: 13 Test acc: 0.418838 Val acc: 0.434906 Best Score : 0.446027
+ epoch end 
+{'epoch': 14, 'joint_acc': 0.4185667752442997, 'op_acc': 0.9656623235613006, 'joint_turn_acc': 0.7639793702497285}
+{'epoch': 14, 'joint_acc': 0.4275834011391375, 'op_acc': 0.9663231172587899, 'joint_turn_acc': 0.7617304041225929}
+Epoch: 14 Test acc: 0.418567 Val acc: 0.427583 Best Score : 0.446027
+ epoch end 
+{'epoch': 15, 'joint_acc': 0.44571118349619976, 'op_acc': 0.9686436844009693, 'joint_turn_acc': 0.7775515743756786}
+{'epoch': 15, 'joint_acc': 0.4689449416870084, 'op_acc': 0.9694150619292533, 'joint_turn_acc': 0.7777325739083265}
+Epoch: 15 Test acc: 0.445711 Val acc: 0.468945 Best Score : 0.468945
+ epoch end 
+{'epoch': 16, 'joint_acc': 0.46186210640608033, 'op_acc': 0.9695168295330711, 'joint_turn_acc': 0.7782301845819761}
+{'epoch': 16, 'joint_acc': 0.47640358014646056, 'op_acc': 0.9704005062832916, 'joint_turn_acc': 0.7762408462164361}
+Epoch: 16 Test acc: 0.461862 Val acc: 0.476404 Best Score : 0.476404
+ epoch end 
+{'epoch': 17, 'joint_acc': 0.44828990228013027, 'op_acc': 0.9682184220050198, 'joint_turn_acc': 0.7774158523344191}
+{'epoch': 17, 'joint_acc': 0.46582587469487385, 'op_acc': 0.9685335864749569, 'joint_turn_acc': 0.7763764578247898}
+Epoch: 17 Test acc: 0.448290 Val acc: 0.465826 Best Score : 0.476404
+ epoch end 
+{'epoch': 18, 'joint_acc': 0.44313246471226925, 'op_acc': 0.9674221860296314, 'joint_turn_acc': 0.7732084690553745}
+{'epoch': 18, 'joint_acc': 0.4548413344182262, 'op_acc': 0.967561703281757, 'joint_turn_acc': 0.7686465961486303}
+Epoch: 18 Test acc: 0.443132 Val acc: 0.454841 Best Score : 0.476404
+ epoch end 
+{'epoch': 19, 'joint_acc': 0.44218241042345274, 'op_acc': 0.9678836409699116, 'joint_turn_acc': 0.7759229098805646}
+{'epoch': 19, 'joint_acc': 0.46650393273664226, 'op_acc': 0.9689404213000203, 'joint_turn_acc': 0.774206672091131}
+Epoch: 19 Test acc: 0.442182 Val acc: 0.466504 Best Score : 0.476404
+ epoch end 
+{'epoch': 20, 'joint_acc': 0.44516829533116176, 'op_acc': 0.9682048498008958, 'joint_turn_acc': 0.7757871878393051}
+{'epoch': 20, 'joint_acc': 0.47586113371304584, 'op_acc': 0.9701247626796403, 'joint_turn_acc': 0.778817466775156}
+Epoch: 20 Test acc: 0.445168 Val acc: 0.475861 Best Score : 0.476404
+ epoch end 
+{'epoch': 21, 'joint_acc': 0.44666123778501626, 'op_acc': 0.968317951501942, 'joint_turn_acc': 0.7772801302931596}
+{'epoch': 21, 'joint_acc': 0.4734201247626797, 'op_acc': 0.9696953259198527, 'joint_turn_acc': 0.7799023596419854}
+Epoch: 21 Test acc: 0.446661 Val acc: 0.473420 Best Score : 0.476404
+ epoch end 
+{'epoch': 22, 'joint_acc': 0.44638979370249726, 'op_acc': 0.9681822294606849, 'joint_turn_acc': 0.7780944625407166}
+{'epoch': 22, 'joint_acc': 0.4652834282614592, 'op_acc': 0.9692523279992297, 'joint_turn_acc': 0.7780037971250339}
+Epoch: 22 Test acc: 0.446390 Val acc: 0.465283 Best Score : 0.476404
+ epoch end 
+{'epoch': 23, 'joint_acc': 0.44761129207383277, 'op_acc': 0.9682138979369772, 'joint_turn_acc': 0.7766015200868621}
+{'epoch': 23, 'joint_acc': 0.47748847301328995, 'op_acc': 0.969713407467635, 'joint_turn_acc': 0.7792243016002169}
+Epoch: 23 Test acc: 0.447611 Val acc: 0.477488 Best Score : 0.477488
+ epoch end 
+{'epoch': 24, 'joint_acc': 0.4514115092290988, 'op_acc': 0.9682138979369789, 'joint_turn_acc': 0.7786373507057546}
+{'epoch': 24, 'joint_acc': 0.4792514239218877, 'op_acc': 0.9697857336587559, 'joint_turn_acc': 0.780037971250339}
+Epoch: 24 Test acc: 0.451412 Val acc: 0.479251 Best Score : 0.479251
+ epoch end 
+{'epoch': 25, 'joint_acc': 0.44476112920738325, 'op_acc': 0.9688336952587252, 'joint_turn_acc': 0.7816232356134636}
+{'epoch': 25, 'joint_acc': 0.457824789802007, 'op_acc': 0.9685516680227351, 'joint_turn_acc': 0.7737998372660699}
+Epoch: 25 Test acc: 0.444761 Val acc: 0.457825 Best Score : 0.479251
+ epoch end 
+{'epoch': 26, 'joint_acc': 0.4499185667752443, 'op_acc': 0.9679334057183745, 'joint_turn_acc': 0.7770086862106406}
+{'epoch': 26, 'joint_acc': 0.4576891781936534, 'op_acc': 0.9679549769459804, 'joint_turn_acc': 0.7719012747491185}
+Epoch: 26 Test acc: 0.449919 Val acc: 0.457689 Best Score : 0.479251
+ epoch end 
+{'epoch': 27, 'joint_acc': 0.44258957654723124, 'op_acc': 0.9680555555555073, 'joint_turn_acc': 0.7744299674267101}
+{'epoch': 27, 'joint_acc': 0.4571467317602387, 'op_acc': 0.9679007323026382, 'joint_turn_acc': 0.7710876050989964}
+Epoch: 27 Test acc: 0.442590 Val acc: 0.457147 Best Score : 0.479251
+ epoch end 
+{'epoch': 28, 'joint_acc': 0.44353963083604775, 'op_acc': 0.9678022077451571, 'joint_turn_acc': 0.7737513572204126}
+{'epoch': 28, 'joint_acc': 0.45660428532682396, 'op_acc': 0.967688274116217, 'joint_turn_acc': 0.7708163818822891}
+Epoch: 28 Test acc: 0.443540 Val acc: 0.456604 Best Score : 0.479251
+ epoch end 
+{'epoch': 29, 'joint_acc': 0.44177524429967424, 'op_acc': 0.9675171914585124, 'joint_turn_acc': 0.7726655808903365}
+{'epoch': 29, 'joint_acc': 0.4526715486845674, 'op_acc': 0.9678284061115138, 'joint_turn_acc': 0.7713588283157038}
+Epoch: 29 Test acc: 0.441775 Val acc: 0.452672 Best Score : 0.479251
+ epoch end 
+{'epoch': 30, 'joint_acc': 0.4523615635179153, 'op_acc': 0.9686165399927166, 'joint_turn_acc': 0.7780944625407166}
+{'epoch': 30, 'joint_acc': 0.4614863032275563, 'op_acc': 0.9683753729318774, 'joint_turn_acc': 0.7740710604827773}
+Epoch: 30 Test acc: 0.452362 Val acc: 0.461486 Best Score : 0.479251
+ epoch end 
+{'epoch': 24, 'joint_acc': 0.4514115092290988, 'op_acc': 0.9682138979369789, 'joint_turn_acc': 0.7786373507057546}
+
+Namespace(alpha=0.6, attention_probs_dropout_prob=0.1, batch_size=32, bert_config_path='assets/bert_config_base_uncased.json', data_root='data/mwz2.0', dec_lr=0.0001, dec_warmup=0.1, decoder_teacher_forcing=0.5, dev_data='dev_dials_v2.json', dev_data_path='data/mwz2.0/dev_dials_v2.json', dropout=0.1, enc_lr=4e-05, enc_warmup=0.1, eval_epoch=1, hidden_dropout_prob=0.1, max_seq_length=256, msg=None, n_epochs=30, n_history=1, not_shuffle_state=False, num_workers=0, ontology_data='data/mwz2.0/ontology-modified.json', op_code='4', random_seed=42, save_dir='outputs20p', shuffle_p=0.5, shuffle_state=True, slot_token='[SLOT]', test_data='test_dials_v2.json', test_data_path='data/mwz2.0/test_dials_v2.json', train_data='train_dials_v2.json', train_data_path='data/mwz2.0/train_dials_v2.json', vocab_path='assets/vocab.txt', word_dropout=0.1)
+['attraction-area', 'attraction-name', 'attraction-type', 'hotel-area', 'hotel-book day', 'hotel-book people', 'hotel-book stay', 'hotel-internet', 'hotel-name', 'hotel-parking', 'hotel-pricerange', 'hotel-stars', 'hotel-type', 'restaurant-area', 'restaurant-book day', 'restaurant-book people', 'restaurant-book time', 'restaurant-food', 'restaurant-name', 'restaurant-pricerange', 'taxi-arriveby', 'taxi-departure', 'taxi-destination', 'taxi-leaveat', 'train-arriveby', 'train-book people', 'train-day', 'train-departure', 'train-destination', 'train-leaveat']
+***** Running training *****
+ Num examples = 54982
+ Batch size = 32
+ Num steps = 51545
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.01
+
+Parameter Group 1
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.0
+)
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 0.0001
+    lr: 0.0
+    weight_decay: 0.0
+)
+Training...
+{'epoch': 1, 'joint_acc': 0.01492942453854506, 'op_acc': 0.8085233441910953, 'joint_turn_acc': 0.32301845819761127}
+{'epoch': 1, 'joint_acc': 0.013425549227013833, 'op_acc': 0.8064234698490176, 'joint_turn_acc': 0.3083807973962571}
+Epoch: 1 Test acc: 0.014929 Val acc: 0.013426 Best Score : 0.013426
+ epoch end 
+{'epoch': 2, 'joint_acc': 0.03488056460369164, 'op_acc': 0.8495792616720809, 'joint_turn_acc': 0.38042888165038}
+{'epoch': 2, 'joint_acc': 0.03336045565500407, 'op_acc': 0.847825693879383, 'joint_turn_acc': 0.3681855166802278}
+Epoch: 2 Test acc: 0.034881 Val acc: 0.033360 Best Score : 0.033360
+ epoch end 
+{'epoch': 3, 'joint_acc': 0.30944625407166126, 'op_acc': 0.9530356496561236, 'joint_turn_acc': 0.7098262757871878}
+{'epoch': 3, 'joint_acc': 0.3216707350149173, 'op_acc': 0.9547283247445527, 'joint_turn_acc': 0.7012476267968538}
+Epoch: 3 Test acc: 0.309446 Val acc: 0.321671 Best Score : 0.321671
+ epoch end 
+{'epoch': 4, 'joint_acc': 0.42928881650380024, 'op_acc': 0.9684491494751598, 'joint_turn_acc': 0.7772801302931596}
+{'epoch': 4, 'joint_acc': 0.4598589639273122, 'op_acc': 0.9702920169966057, 'joint_turn_acc': 0.7766476810414972}
+Epoch: 4 Test acc: 0.429289 Val acc: 0.459859 Best Score : 0.459859
+ epoch end 
+{'epoch': 5, 'joint_acc': 0.5374592833876222, 'op_acc': 0.9754207383278637, 'joint_turn_acc': 0.8261400651465798}
+{'epoch': 5, 'joint_acc': 0.5816381882289124, 'op_acc': 0.9784332338847764, 'joint_turn_acc': 0.8333333333333334}
+Epoch: 5 Test acc: 0.537459 Val acc: 0.581638 Best Score : 0.581638
+ epoch end 
+{'epoch': 6, 'joint_acc': 0.5711183496199783, 'op_acc': 0.9774791892869636, 'joint_turn_acc': 0.8346905537459284}
+{'epoch': 6, 'joint_acc': 0.5881475454298888, 'op_acc': 0.9788852725792886, 'joint_turn_acc': 0.838486574450773}
+Epoch: 6 Test acc: 0.571118 Val acc: 0.588148 Best Score : 0.588148
+ epoch end 
+{'epoch': 7, 'joint_acc': 0.6039630836047775, 'op_acc': 0.9804243575822971, 'joint_turn_acc': 0.8561346362649295}
+{'epoch': 7, 'joint_acc': 0.6423921887713588, 'op_acc': 0.982917457734341, 'joint_turn_acc': 0.8622186059126661}
+Epoch: 7 Test acc: 0.603963 Val acc: 0.642392 Best Score : 0.642392
+ epoch end 
+{'epoch': 8, 'joint_acc': 0.6007057546145494, 'op_acc': 0.9802524429966999, 'joint_turn_acc': 0.8523344191096635}
+{'epoch': 8, 'joint_acc': 0.6310008136696501, 'op_acc': 0.9823478889792565, 'joint_turn_acc': 0.8577434228369949}
+Epoch: 8 Test acc: 0.600706 Val acc: 0.631001 Best Score : 0.642392
+ epoch end 
+{'epoch': 9, 'joint_acc': 0.6407437567861021, 'op_acc': 0.9826185305826636, 'joint_turn_acc': 0.867128121606949}
+{'epoch': 9, 'joint_acc': 0.6739896935177652, 'op_acc': 0.9848250610251847, 'joint_turn_acc': 0.8725250881475455}
+Epoch: 9 Test acc: 0.640744 Val acc: 0.673990 Best Score : 0.673990
+ epoch end 
+{'epoch': 10, 'joint_acc': 0.627442996742671, 'op_acc': 0.9816368078175505, 'joint_turn_acc': 0.8622421281216069}
+{'epoch': 10, 'joint_acc': 0.6714130729590453, 'op_acc': 0.9844137058131825, 'joint_turn_acc': 0.8751017087062652}
+Epoch: 10 Test acc: 0.627443 Val acc: 0.671413 Best Score : 0.673990
+ epoch end 
+{'epoch': 11, 'joint_acc': 0.6517372421281216, 'op_acc': 0.9832971407889632, 'joint_turn_acc': 0.871199782844734}
+{'epoch': 11, 'joint_acc': 0.6927040954705723, 'op_acc': 0.9859189946659046, 'joint_turn_acc': 0.88228912394901}
+Epoch: 11 Test acc: 0.651737 Val acc: 0.692704 Best Score : 0.692704
+ epoch end 
+{'epoch': 12, 'joint_acc': 0.6678881650380022, 'op_acc': 0.9844236337314154, 'joint_turn_acc': 0.87771444082519}
+{'epoch': 12, 'joint_acc': 0.7110116625983184, 'op_acc': 0.9865473284512813, 'joint_turn_acc': 0.8875779766748033}
+Epoch: 12 Test acc: 0.667888 Val acc: 0.711012 Best Score : 0.711012
+ epoch end 
+{'epoch': 13, 'joint_acc': 0.637486427795874, 'op_acc': 0.9825506695620314, 'joint_turn_acc': 0.8672638436482085}
+{'epoch': 13, 'joint_acc': 0.6959587740710604, 'op_acc': 0.9853810686194433, 'joint_turn_acc': 0.8835096284241931}
+Epoch: 13 Test acc: 0.637486 Val acc: 0.695959 Best Score : 0.711012
+ epoch end 
+{'epoch': 14, 'joint_acc': 0.7052117263843648, 'op_acc': 0.9861518277234543, 'joint_turn_acc': 0.8880293159609121}
+{'epoch': 14, 'joint_acc': 0.7340656360184432, 'op_acc': 0.9876503028658953, 'joint_turn_acc': 0.8976132356929754}
+Epoch: 14 Test acc: 0.705212 Val acc: 0.734066 Best Score : 0.734066
+ epoch end 
+{'epoch': 15, 'joint_acc': 0.6769815418023887, 'op_acc': 0.9846769815417635, 'joint_turn_acc': 0.8767643865363735}
+{'epoch': 15, 'joint_acc': 0.7283699484675888, 'op_acc': 0.9875463339661552, 'joint_turn_acc': 0.892324382967182}
+Epoch: 15 Test acc: 0.676982 Val acc: 0.728370 Best Score : 0.734066
+ epoch end 
+{'epoch': 16, 'joint_acc': 0.6890608034744843, 'op_acc': 0.9857220412594628, 'joint_turn_acc': 0.881243213897937}
+{'epoch': 16, 'joint_acc': 0.7369134797938703, 'op_acc': 0.9881339842690224, 'joint_turn_acc': 0.8993761866015731}
+Epoch: 16 Test acc: 0.689061 Val acc: 0.736913 Best Score : 0.736913
+ epoch end 
+{'epoch': 17, 'joint_acc': 0.6896036916395223, 'op_acc': 0.9856722765110038, 'joint_turn_acc': 0.886400651465798}
+{'epoch': 17, 'joint_acc': 0.736642256577163, 'op_acc': 0.98841424825962, 'joint_turn_acc': 0.8986981285598047}
+Epoch: 17 Test acc: 0.689604 Val acc: 0.736642 Best Score : 0.736913
+ epoch end 
+{'epoch': 18, 'joint_acc': 0.7020901194353963, 'op_acc': 0.9857808541440125, 'joint_turn_acc': 0.8888436482084691}
+{'epoch': 18, 'joint_acc': 0.7389476539191755, 'op_acc': 0.9883509628423877, 'joint_turn_acc': 0.9007323026851098}
+Epoch: 18 Test acc: 0.702090 Val acc: 0.738948 Best Score : 0.738948
+ epoch end 
+{'epoch': 19, 'joint_acc': 0.6973398479913138, 'op_acc': 0.9862106406080016, 'joint_turn_acc': 0.8891150922909881}
+{'epoch': 19, 'joint_acc': 0.7476267968538107, 'op_acc': 0.9887035530241092, 'joint_turn_acc': 0.9011391375101708}
+Epoch: 19 Test acc: 0.697340 Val acc: 0.747627 Best Score : 0.747627
+ epoch end 
+{'epoch': 20, 'joint_acc': 0.7004614549402823, 'op_acc': 0.986283025696673, 'joint_turn_acc': 0.8876221498371335}
+{'epoch': 20, 'joint_acc': 0.7492541361540548, 'op_acc': 0.9886041045113174, 'joint_turn_acc': 0.9015459723352319}
+Epoch: 20 Test acc: 0.700461 Val acc: 0.749254 Best Score : 0.749254
+ epoch end 
+{'epoch': 21, 'joint_acc': 0.6980184581976113, 'op_acc': 0.9863373145131761, 'joint_turn_acc': 0.8870792616720955}
+{'epoch': 21, 'joint_acc': 0.7628152969894223, 'op_acc': 0.9894494168700552, 'joint_turn_acc': 0.9069704366693789}
+Epoch: 21 Test acc: 0.698018 Val acc: 0.762815 Best Score : 0.762815
+ epoch end 
+{'epoch': 22, 'joint_acc': 0.7033116178067318, 'op_acc': 0.9864504162142264, 'joint_turn_acc': 0.8893865363735071}
+{'epoch': 22, 'joint_acc': 0.7653919175481422, 'op_acc': 0.9894720188047819, 'joint_turn_acc': 0.9079197179278546}
+Epoch: 22 Test acc: 0.703312 Val acc: 0.765392 Best Score : 0.765392
+ epoch end 
+{'epoch': 23, 'joint_acc': 0.7010043431053203, 'op_acc': 0.9862151646760443, 'joint_turn_acc': 0.8887079261672095}
+{'epoch': 23, 'joint_acc': 0.7392188771358829, 'op_acc': 0.9885091763854673, 'joint_turn_acc': 0.9018171955519393}
+Epoch: 23 Test acc: 0.701004 Val acc: 0.739219 Best Score : 0.765392
+ epoch end 
+{'epoch': 24, 'joint_acc': 0.7052117263843648, 'op_acc': 0.9864639884183523, 'joint_turn_acc': 0.8906080347448425}
+{'epoch': 24, 'joint_acc': 0.7645782478980201, 'op_acc': 0.989467498417837, 'joint_turn_acc': 0.9083265527529156}
+Epoch: 24 Test acc: 0.705212 Val acc: 0.764578 Best Score : 0.765392
+ epoch end 
+{'epoch': 25, 'joint_acc': 0.7100977198697068, 'op_acc': 0.9868078175895445, 'joint_turn_acc': 0.8918295331161781}
+{'epoch': 25, 'joint_acc': 0.7670192568483862, 'op_acc': 0.9897115993128743, 'joint_turn_acc': 0.9083265527529156}
+Epoch: 25 Test acc: 0.710098 Val acc: 0.767019 Best Score : 0.767019
+ epoch end 
+{'epoch': 26, 'joint_acc': 0.7083333333333334, 'op_acc': 0.9866359030039484, 'joint_turn_acc': 0.8914223669923995}
+{'epoch': 26, 'joint_acc': 0.7685109845402767, 'op_acc': 0.9895443449959059, 'joint_turn_acc': 0.908597775969623}
+Epoch: 26 Test acc: 0.708333 Val acc: 0.768511 Best Score : 0.768511
+ epoch end 
+{'epoch': 27, 'joint_acc': 0.6992399565689468, 'op_acc': 0.9863192182410077, 'joint_turn_acc': 0.8907437567861021}
+{'epoch': 27, 'joint_acc': 0.763357743422837, 'op_acc': 0.9894901003525628, 'joint_turn_acc': 0.9096826688364524}
+Epoch: 27 Test acc: 0.699240 Val acc: 0.763358 Best Score : 0.768511
+ epoch end 
+{'epoch': 28, 'joint_acc': 0.6982899022801303, 'op_acc': 0.9862423090842948, 'joint_turn_acc': 0.8902008686210641}
+{'epoch': 28, 'joint_acc': 0.7592893951722267, 'op_acc': 0.9891781936533485, 'joint_turn_acc': 0.9061567670192568}
+Epoch: 28 Test acc: 0.698290 Val acc: 0.759289 Best Score : 0.768511
+ epoch end 
+{'epoch': 29, 'joint_acc': 0.7087404994571118, 'op_acc': 0.9867851972493334, 'joint_turn_acc': 0.8938653637350705}
+{'epoch': 29, 'joint_acc': 0.7649850827230811, 'op_acc': 0.9895398246089584, 'joint_turn_acc': 0.9094114456197451}
+Epoch: 29 Test acc: 0.708740 Val acc: 0.764985 Best Score : 0.768511
+ epoch end 
+{'epoch': 30, 'joint_acc': 0.7003257328990228, 'op_acc': 0.9865725660513587, 'joint_turn_acc': 0.8919652551574375}
+{'epoch': 30, 'joint_acc': 0.7660699755899105, 'op_acc': 0.9894765391917272, 'joint_turn_acc': 0.9098182804448061}
+Epoch: 30 Test acc: 0.700326 Val acc: 0.766070 Best Score : 0.768511
+ epoch end 
+{'epoch': 26, 'joint_acc': 0.7083333333333334, 'op_acc': 0.9866359030039484, 'joint_turn_acc': 0.8914223669923995}
+
+Namespace(alpha=1.0, attention_probs_dropout_prob=0.1, batch_size=32, bert_config_path='assets/bert_config_base_uncased.json', data_root='data/mwz2.0', dec_lr=0.0001, dec_warmup=0.1, decoder_teacher_forcing=0.5, dev_data='dev_dials_v2.json', dev_data_path='data/mwz2.0/dev_dials_v2.json', dropout=0.1, enc_lr=4e-05, enc_warmup=0.1, eval_epoch=1, hidden_dropout_prob=0.1, max_seq_length=256, msg=None, n_epochs=30, n_history=1, not_shuffle_state=False, num_workers=0, ontology_data='data/mwz2.0/ontology-modified.json', op_code='4', random_seed=42, save_dir='outputs20ponly', shuffle_p=0.5, shuffle_state=True, slot_token='[SLOT]', test_data='test_dials_v2.json', test_data_path='data/mwz2.0/test_dials_v2.json', train_data='train_dials_v2.json', train_data_path='data/mwz2.0/train_dials_v2.json', vocab_path='assets/vocab.txt', word_dropout=0.1)
+['attraction-area', 'attraction-name', 'attraction-type', 'hotel-area', 'hotel-book day', 'hotel-book people', 'hotel-book stay', 'hotel-internet', 'hotel-name', 'hotel-parking', 'hotel-pricerange', 'hotel-stars', 'hotel-type', 'restaurant-area', 'restaurant-book day', 'restaurant-book people', 'restaurant-book time', 'restaurant-food', 'restaurant-name', 'restaurant-pricerange', 'taxi-arriveby', 'taxi-departure', 'taxi-destination', 'taxi-leaveat', 'train-arriveby', 'train-book people', 'train-day', 'train-departure', 'train-destination', 'train-leaveat']
+***** Running training *****
+ Num examples = 54982
+ Batch size = 32
+ Num steps = 51545
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.01
+
+Parameter Group 1
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 4e-05
+    lr: 0.0
+    weight_decay: 0.0
+)
+AdamW (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    correct_bias: True
+    eps: 1e-06
+    initial_lr: 0.0001
+    lr: 0.0
+    weight_decay: 0.0
+)
+Training...
+{'epoch': 1, 'joint_acc': 0.01492942453854506, 'op_acc': 0.8085233441910953, 'joint_turn_acc': 0.32301845819761127}
+{'epoch': 1, 'joint_acc': 0.013425549227013833, 'op_acc': 0.8064234698490176, 'joint_turn_acc': 0.3083807973962571}
+Epoch: 1 Test acc: 0.014929 Val acc: 0.013426 Best Score : 0.013426
+ epoch end 
+{'epoch': 2, 'joint_acc': 0.03026601520086862, 'op_acc': 0.8437115454216318, 'joint_turn_acc': 0.378800217155266}
+{'epoch': 2, 'joint_acc': 0.029427719012747492, 'op_acc': 0.8424012295452395, 'joint_turn_acc': 0.37076213723894763}
+Epoch: 2 Test acc: 0.030266 Val acc: 0.029428 Best Score : 0.029428
+ epoch end 
+{'epoch': 3, 'joint_acc': 0.06813246471226928, 'op_acc': 0.8951366268548444, 'joint_turn_acc': 0.47041259500542887}
+{'epoch': 3, 'joint_acc': 0.06414429075128832, 'op_acc': 0.8927945032094462, 'joint_turn_acc': 0.4587740710604828}
+Epoch: 3 Test acc: 0.068132 Val acc: 0.064144 Best Score : 0.064144
+ epoch end 
+{'epoch': 4, 'joint_acc': 0.3293973941368078, 'op_acc': 0.9563698878030626, 'joint_turn_acc': 0.7197339847991314}
+{'epoch': 4, 'joint_acc': 0.34486032004339573, 'op_acc': 0.9589142030557329, 'joint_turn_acc': 0.7299972877678329}
+Epoch: 4 Test acc: 0.329397 Val acc: 0.344860 Best Score : 0.344860
+ epoch end 
+{'epoch': 5, 'joint_acc': 0.46457654723127034, 'op_acc': 0.9693856315598485, 'joint_turn_acc': 0.7881378935939196}
+{'epoch': 5, 'joint_acc': 0.4998643883916463, 'op_acc': 0.9727646686555869, 'joint_turn_acc': 0.800515324111744}
+Epoch: 5 Test acc: 0.464577 Val acc: 0.499864 Best Score : 0.499864
+ epoch end 
+{'epoch': 6, 'joint_acc': 0.5130293159609121, 'op_acc': 0.9711816865725229, 'joint_turn_acc': 0.8018458197611292}
+{'epoch': 6, 'joint_acc': 0.5219690805532954, 'op_acc': 0.9730539734200789, 'joint_turn_acc': 0.8068890697043667}
+Epoch: 6 Test acc: 0.513029 Val acc: 0.521969 Best Score : 0.521969
+ epoch end 
+{'epoch': 7, 'joint_acc': 0.5970412595005429, 'op_acc': 0.9791892870068339, 'joint_turn_acc': 0.8445982627578719}
+{'epoch': 7, 'joint_acc': 0.6206943314347708, 'op_acc': 0.9815477804899675, 'joint_turn_acc': 0.8573365880119338}
+Epoch: 7 Test acc: 0.597041 Val acc: 0.620694 Best Score : 0.620694
+ epoch end 
+{'epoch': 8, 'joint_acc': 0.6035559174809989, 'op_acc': 0.9792209554831303, 'joint_turn_acc': 0.8463626492942454}
+{'epoch': 8, 'joint_acc': 0.6262544073772714, 'op_acc': 0.9823252870445272, 'joint_turn_acc': 0.8608624898291294}
+Epoch: 8 Test acc: 0.603556 Val acc: 0.626254 Best Score : 0.626254
+ epoch end 
+{'epoch': 9, 'joint_acc': 0.5941910966340934, 'op_acc': 0.9791395222583744, 'joint_turn_acc': 0.8397122692725298}
+{'epoch': 9, 'joint_acc': 0.6174396528342826, 'op_acc': 0.9808154778048611, 'joint_turn_acc': 0.8494711147274207}
+Epoch: 9 Test acc: 0.594191 Val acc: 0.617440 Best Score : 0.626254
+ epoch end 
+{'epoch': 10, 'joint_acc': 0.636672095548317, 'op_acc': 0.9822566051393022, 'joint_turn_acc': 0.863327904451683}
+{'epoch': 10, 'joint_acc': 0.6672091131000814, 'op_acc': 0.985046559985495, 'joint_turn_acc': 0.8783563873067535}
+Epoch: 10 Test acc: 0.636672 Val acc: 0.667209 Best Score : 0.667209
+ epoch end 
+{'epoch': 11, 'joint_acc': 0.6434581976112921, 'op_acc': 0.9827633007600061, 'joint_turn_acc': 0.868213897937025}
+{'epoch': 11, 'joint_acc': 0.6803634391103879, 'op_acc': 0.9853223035891482, 'joint_turn_acc': 0.881475454298888}
+Epoch: 11 Test acc: 0.643458 Val acc: 0.680363 Best Score : 0.680363
+ epoch end 
+{'epoch': 12, 'joint_acc': 0.633414766558089, 'op_acc': 0.9828537821208421, 'joint_turn_acc': 0.864956568946797}
+{'epoch': 12, 'joint_acc': 0.6842961757526445, 'op_acc': 0.9857472199619906, 'joint_turn_acc': 0.8795768917819365}
+Epoch: 12 Test acc: 0.633415 Val acc: 0.684296 Best Score : 0.684296
+ epoch end 
+{'epoch': 13, 'joint_acc': 0.6399294245385451, 'op_acc': 0.9830573651827319, 'joint_turn_acc': 0.866313789359392}
+{'epoch': 13, 'joint_acc': 0.6804990507187415, 'op_acc': 0.9856025675797472, 'joint_turn_acc': 0.881475454298888}
+Epoch: 13 Test acc: 0.639929 Val acc: 0.680499 Best Score : 0.684296
+ epoch end 
+{'epoch': 14, 'joint_acc': 0.6571661237785016, 'op_acc': 0.9834645313065132, 'joint_turn_acc': 0.8705211726384365}
+{'epoch': 14, 'joint_acc': 0.7051803634391104, 'op_acc': 0.9864885634209896, 'joint_turn_acc': 0.8900189856251696}
+Epoch: 14 Test acc: 0.657166 Val acc: 0.705180 Best Score : 0.705180
+ epoch end 
+{'epoch': 15, 'joint_acc': 0.6501085776330076, 'op_acc': 0.9832790445167923, 'joint_turn_acc': 0.86685667752443}
+{'epoch': 15, 'joint_acc': 0.7104692161649037, 'op_acc': 0.9866919808335248, 'joint_turn_acc': 0.8885272579332791}
+Epoch: 15 Test acc: 0.650109 Val acc: 0.710469 Best Score : 0.710469
+ epoch end 
+{'epoch': 16, 'joint_acc': 0.6464440825190011, 'op_acc': 0.9833559536735034, 'joint_turn_acc': 0.8691639522258415}
+{'epoch': 16, 'joint_acc': 0.7245728234336859, 'op_acc': 0.9873474369405703, 'joint_turn_acc': 0.8934092758340114}
+Epoch: 16 Test acc: 0.646444 Val acc: 0.724573 Best Score : 0.724573
+ epoch end 
+{'epoch': 17, 'joint_acc': 0.6655808903365906, 'op_acc': 0.9839621787911322, 'joint_turn_acc': 0.871742671009772}
+{'epoch': 17, 'joint_acc': 0.7245728234336859, 'op_acc': 0.9875553747400456, 'joint_turn_acc': 0.8947653919175481}
+Epoch: 17 Test acc: 0.665581 Val acc: 0.724573 Best Score : 0.724573
+ epoch end 
+{'epoch': 18, 'joint_acc': 0.6480727470141151, 'op_acc': 0.9835912052116876, 'joint_turn_acc': 0.8705211726384365}
+{'epoch': 18, 'joint_acc': 0.7241659886086249, 'op_acc': 0.9874740077750314, 'joint_turn_acc': 0.8957146731760238}
+Epoch: 18 Test acc: 0.648073 Val acc: 0.724166 Best Score : 0.724573
+ epoch end 
+{'epoch': 19, 'joint_acc': 0.6547231270358306, 'op_acc': 0.9838943177705013, 'joint_turn_acc': 0.8705211726384365}
+{'epoch': 19, 'joint_acc': 0.725793327908869, 'op_acc': 0.9875870174486604, 'joint_turn_acc': 0.8949010035259019}
+Epoch: 19 Test acc: 0.654723 Val acc: 0.725793 Best Score : 0.725793
+ epoch end 
+{'epoch': 20, 'joint_acc': 0.6628664495114006, 'op_acc': 0.9839938472674262, 'joint_turn_acc': 0.8732356134636265}
+{'epoch': 20, 'joint_acc': 0.7301328993761866, 'op_acc': 0.9874920893228134, 'joint_turn_acc': 0.8985625169514511}
+Epoch: 20 Test acc: 0.662866 Val acc: 0.730133 Best Score : 0.730133
+ epoch end 
+{'epoch': 21, 'joint_acc': 0.6635450597176982, 'op_acc': 0.9841838581251889, 'joint_turn_acc': 0.8748642779587406}
+{'epoch': 21, 'joint_acc': 0.7230810957417955, 'op_acc': 0.9874740077750318, 'joint_turn_acc': 0.8976132356929754}
+Epoch: 21 Test acc: 0.663545 Val acc: 0.723081 Best Score : 0.730133
+ epoch end 
+{'epoch': 22, 'joint_acc': 0.6642236699239956, 'op_acc': 0.9845095910242088, 'joint_turn_acc': 0.8735070575461455}
+{'epoch': 22, 'joint_acc': 0.7320314618931381, 'op_acc': 0.9877452309917384, 'joint_turn_acc': 0.8984269053430973}
+Epoch: 22 Test acc: 0.664224 Val acc: 0.732031 Best Score : 0.732031
+ epoch end 
+{'epoch': 23, 'joint_acc': 0.6748099891422367, 'op_acc': 0.9851293883459638, 'joint_turn_acc': 0.878257328990228}
+{'epoch': 23, 'joint_acc': 0.7359641985353946, 'op_acc': 0.9881430250429111, 'joint_turn_acc': 0.9000542446433415}
+Epoch: 23 Test acc: 0.674810 Val acc: 0.735964 Best Score : 0.735964
+ epoch end 
+{'epoch': 24, 'joint_acc': 0.6700597176981542, 'op_acc': 0.9849981903727453, 'joint_turn_acc': 0.8775787187839305}
+{'epoch': 24, 'joint_acc': 0.7426091673447247, 'op_acc': 0.9881746677515286, 'joint_turn_acc': 0.9022240303770003}
+Epoch: 24 Test acc: 0.670060 Val acc: 0.742609 Best Score : 0.742609
+ epoch end 
+{'epoch': 25, 'joint_acc': 0.6771172638436482, 'op_acc': 0.985437024972817, 'joint_turn_acc': 0.8775787187839305}
+{'epoch': 25, 'joint_acc': 0.7427447789530783, 'op_acc': 0.9883102793598814, 'joint_turn_acc': 0.9026308652020613}
+Epoch: 25 Test acc: 0.677117 Val acc: 0.742745 Best Score : 0.742745
+ epoch end 
+{'epoch': 26, 'joint_acc': 0.6661237785016286, 'op_acc': 0.9848669923995274, 'joint_turn_acc': 0.876628664495114}
+{'epoch': 26, 'joint_acc': 0.7464062923786277, 'op_acc': 0.9885498598679734, 'joint_turn_acc': 0.904393816110659}
+Epoch: 26 Test acc: 0.666124 Val acc: 0.746406 Best Score : 0.746406
+ epoch end 
+{'epoch': 27, 'joint_acc': 0.6706026058631922, 'op_acc': 0.9851565327542132, 'joint_turn_acc': 0.8794788273615635}
+{'epoch': 27, 'joint_acc': 0.7495253593707621, 'op_acc': 0.9886402676068773, 'joint_turn_acc': 0.9060211554109032}
+Epoch: 27 Test acc: 0.670603 Val acc: 0.749525 Best Score : 0.749525
+ epoch end 
+{'epoch': 28, 'joint_acc': 0.6722312703583062, 'op_acc': 0.9850389069851238, 'joint_turn_acc': 0.8792073832790445}
+{'epoch': 28, 'joint_acc': 0.7432872253864931, 'op_acc': 0.9883600036162777, 'joint_turn_acc': 0.9020884187686466}
+Epoch: 28 Test acc: 0.672231 Val acc: 0.743287 Best Score : 0.749525
+ epoch end 
+{'epoch': 29, 'joint_acc': 0.6746742671009772, 'op_acc': 0.9851339124140035, 'joint_turn_acc': 0.878800217155266}
+{'epoch': 29, 'joint_acc': 0.7449145646867372, 'op_acc': 0.9883283609076622, 'joint_turn_acc': 0.902766476810415}
+Epoch: 29 Test acc: 0.674674 Val acc: 0.744915 Best Score : 0.749525
+ epoch end 
+{'epoch': 30, 'joint_acc': 0.6765743756786102, 'op_acc': 0.9852605863191799, 'joint_turn_acc': 0.8797502714440825}
+{'epoch': 30, 'joint_acc': 0.7450501762950908, 'op_acc': 0.9883916463248944, 'joint_turn_acc': 0.9034445348521833}
+Epoch: 30 Test acc: 0.676574 Val acc: 0.745050 Best Score : 0.749525
+ epoch end 
+{'epoch': 27, 'joint_acc': 0.6706026058631922, 'op_acc': 0.9851565327542132, 'joint_turn_acc': 0.8794788273615635}
