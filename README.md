@@ -10,6 +10,10 @@ The MultiWOZ 2.0 dataset has greatly boosted the research on dialogue state trac
 
 Please refer to each method for the details.
 
++ [AUX-DST](https://github.com/smartyfh/DST-ASSIST/tree/main/AUX-DST)
++ [STAR](https://github.com/smartyfh/DST-ASSIST/tree/main/STAR)
++ [SOM-DST](https://github.com/smartyfh/DST-ASSIST/tree/main/SOM-DST)
+
 ## Citation
 
 ```bibtex
