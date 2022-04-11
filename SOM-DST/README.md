@@ -25,14 +25,14 @@ or
 Before training the model, we need to copy the generated pseudo labels by the AUX-DST model to the current directory at first. Then simply run:
 
 ```console
-❱❱❱ python3 train-pseudo.py --data_dir data/mwz2.0 --save_dir output-pseudo-20/exp --alpha 0.6
+❱❱❱ python3 train-pseudo.py --data_root data/mwz2.0 --save_dir output-pseudo-20/exp --alpha 0.6
 ```
 
 or
 
 
 ```console
-❱❱❱ python3 train-pseudo.py --data_dir data/mwz2.4 --save_dir output-pseudo-24/exp --alpha 0.4
+❱❱❱ python3 train-pseudo.py --data_root data/mwz2.4 --save_dir output-pseudo-24/exp --alpha 0.4
 ```
 
 **Note:** The parameter *alpha* is utilized to adjust the weights of the pseudo labels and the vanilla noisy labels. When *alpha=1*, only the pseudo labels are effective. When "alpha=0", only the vanilla labels are effective.
